@@ -1,0 +1,19 @@
+<a style="position: relative;top: 20px;left: 40px;" class="btn"  href="add/0" >Add Vendor</a>
+<table class="table">
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tr  *ngFor="let vendor of vendors">
+        <td>{{vendor.id}}</td>
+        <td>{{vendor.name}}</td>
+        <td>{{vendor.type}}</td>
+        <td>{{vendor.email}}</td>
+        <td><button class="btn" (click)="onSelect(vendor.id)">Edit</button></td>
+        <td><button class="btn" (click)="onDelete(vendor.id)">Delete</button></td>
+    </tr>
+</table>
